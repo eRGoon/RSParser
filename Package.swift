@@ -5,16 +5,17 @@ import PackageDescription
 
 let package = Package(
     name: "RSParser",
-    platforms: [.macOS(SupportedPlatform.MacOSVersion.v10_15), .iOS(SupportedPlatform.IOSVersion.v13)],
+    platforms: [
+      .macOS(.v10_15),
+      .iOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "RSParser",
-            type: .dynamic,
             targets: ["RSParser"]),
         .library(
             name: "RSParserObjC",
-            type: .dynamic,
             targets: ["RSParserObjC"]),
     ],
     dependencies: [
